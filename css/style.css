@@ -1,0 +1,286 @@
+/* Reset básico */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e2e7f3;
+  color: #333;
+  line-height: 1.4;
+}
+
+.header {
+  background: #003366;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.header nav a:hover {
+  color: #ffcc00;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 230px 1fr 260px;
+  gap: 1rem;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Aside izquierda */
+
+.leftSide {
+  background: #f5f8fb;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 0.1);
+}
+
+.menu-box h2 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.4rem;
+}
+
+.league-menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+.league-menu li {
+  margin: 8px 0;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111;
+  display: flex;
+  align-items: center;
+}
+
+.league-menu li a {
+  text-decoration: none;
+  color: #003366;
+  transition: color 0.3s ease;
+}
+
+.league-menu li a:hover {
+  color: #ff6600;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+}
+
+.formulario-contacto {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto h2 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.formulario-contacto label {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  margin-top: 0.3rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.formulario-contacto button {
+  margin-top: 1rem;
+  padding: 10px;
+  background: #003366;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background: #0055aa;
+}
+
+/* Sección principal */
+
+.body {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 15px rgb(0 0 0 / 0.1);
+  padding: 1rem;
+}
+
+.body h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+  font-weight: 700;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.4rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+  gap: 1rem;
+}
+
+article {
+  background: #f1f7ff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 0.1);
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: scale(1.03);
+}
+
+figure {
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-article {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+figure:hover .img-article {
+  transform: scale(1.1);
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: #555;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  color: #003366;
+}
+
+/* Imagen interactiva */
+
+.img-map {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  display: block;
+  margin: 1rem auto;
+}
+
+.img-map:hover {
+  filter: brightness(1.1);
+}
+
+/* Aside derecha */
+
+.rightSide {
+  background: #f5f8fb;
+  width: 140%;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+.gif-move {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.mod-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.mod-data thead {
+  background: #003366;
+  color: white;
+}
+
+.mod-data th, .mod-data td {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.mod-data tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.mod-data tbody tr:hover {
+  background: #dce9f9;
+}
+
+/* Footer */
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .leftSide, .rightSide, .body {
+    margin-bottom: 1rem;
+  }
+  .gif-move {
+    max-width: 100%;
+  }
+}
+
