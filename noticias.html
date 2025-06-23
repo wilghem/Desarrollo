@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noticias - Deporte Total</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body onload="inicializarEventos()">
+  <header class="header">
+    <h1>Deporte Total</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="torneos.html">Torneos</a>
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="leftSide">
+      <div class="menu-box">
+        <h2>Secciones</h2>
+        <ul class="league-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="estadisticas.html">Estadísticas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="formulario-contacto">
+        <h2>Contáctanos</h2>
+        <form>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </aside>
+
+    <main class="body">
+      <h2>Últimas Noticias</h2>
+
+      <div class="container">
+        <article>
+          <figure>
+            <img src="img/clasico.jpg" alt="Clásico universitario" class="img-article" />
+            <figcaption>Estadio Monumental, 2025</figcaption>
+          </figure>
+          <h3>La 'U' se impone en el clásico</h3>
+          <p>Universitario de Deportes venció a Sporting Cristal en un intenso partido disputado en el Estadio Monumental. Con este resultado, se mantiene como líder del campeonato.</p>
+          <a href="#">Leer más...</a>
+        </article>
+
+        <article>
+          <figure>
+            <img src="img/alianza.jpg" alt="Alianza Lima vs Cienciano" class="img-article" />
+            <figcaption>Estadio Alejandro Villanueva</figcaption>
+          </figure>
+          <h3>Alianza Lima cae ante Cienciano</h3>
+          <p>El equipo del Cusco sorprendió con una victoria de 2-1 sobre Alianza Lima. El técnico íntimo anuncia cambios para el próximo encuentro.</p>
+          <a href="#">Leer más...</a>
+        </article>
+
+        <article>
+          <figure>
+            <img src="img/melgar.jpg" alt="Binacional vs Melgar" class="img-article" />
+            <figcaption>Arequipa, partido de altura</figcaption>
+          </figure>
+          <h3>Melgar y Alianza Universidad empatan en Arequipa</h3>
+          <p>En un duelo de altura, Melgar y Alianza Univesidad igualaron 1-1. Donde Melgar pierde chances de alcanzar al lider del torneo.</p>
+          <a href="#">Leer más...</a>
+        </article>
+      </div>
+    </main>
+
+    <aside class="rightSide">
+      <h2>Síguenos en redes</h2>
+      <ul class="league-menu">
+        <li><img src="icons/facebook.png" alt="Facebook" class="icon"> Facebook</li>
+        <li><img src="icons/instagram.png" alt="Instagram" class="icon"> Instagram</li>
+        <li><img src="icons/youtube.png" alt="Youtube" class="icon"> Youtube</li>
+        <li><img src="icons/twitter.png" alt="Twitter" class="icon"> Twitter</li>
+      </ul>
+
+      <h2>Otros deportes</h2>
+      <ul class="league-menu">
+        <li><img src="icons/automovilismo.png" alt="Auto" class="icon"> Automovilismo</li>
+        <li><img src="icons/baloncesto.png" alt="Balón" class="icon"> Básquetbol</li>
+        <li><img src="icons/beisbol.png" alt="Beisbol" class="icon"> Béisbol</li>
+        <li><img src="icons/boxeo.png" alt="Boxeo" class="icon"> Boxeo</li>
+        <li><img src="icons/golf.png" alt="Golf" class="icon"> Golf</li>
+        <li><img src="icons/mma.png" alt="MMA" class="icon"> MMA</li>
+        <li><img src="icons/nfl.png" alt="NFL" class="icon"> NFL</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Deporte Total. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

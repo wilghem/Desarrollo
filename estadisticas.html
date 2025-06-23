@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estadísticas - Deporte Total</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body onload="inicializarEventos()">
+  <header class="header">
+    <h1>Deporte Total</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="torneos.html">Torneos</a>
+      <a href="estadisticas.html">Estadísticas</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Menú lateral izquierdo -->
+    <aside class="leftSide">
+      <div class="menu-box">
+        <h2>Secciones</h2>
+        <ul class="league-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="estadisticas.html">Estadísticas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="formulario-contacto">
+        <h2>Contáctanos</h2>
+        <form>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="body">
+      <h2>Estadísticas de la Temporada</h2>
+
+      <section>
+        <h3>Máximos Goleadores</h3>
+        <table class="mod-data">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th>Equipo</th>
+              <th>Goles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Álex Valera</td>
+              <td>Universitario</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Bernardo Cuesta</td>
+              <td>Melgar</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Kevin Sandoval</td>
+              <td>Cienciano</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>Porteros con más arcos en cero</h3>
+        <table class="mod-data">
+          <thead>
+            <tr>
+              <th>Portero</th>
+              <th>Equipo</th>
+              <th>Partidos sin goles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>José Carvallo</td>
+              <td>Universitario</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Carlos Cáceda</td>
+              <td>Melgar</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Ángel Zamudio</td>
+              <td>UTC</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>Promedios de asistencia por partido</h3>
+        <table class="mod-data">
+          <thead>
+            <tr>
+              <th>Equipo</th>
+              <th>Estadio</th>
+              <th>Asistencia promedio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alianza Lima</td>
+              <td>Matute</td>
+              <td>22,000</td>
+            </tr>
+            <tr>
+              <td>Universitario</td>
+              <td>Monumental</td>
+              <td>30,000</td>
+            </tr>
+            <tr>
+              <td>Melgar</td>
+              <td>Monumental de la UNSA</td>
+              <td>18,500</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Barra lateral derecha -->
+    <aside class="rightSide">
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>El gol más rápido del torneo fue a los 17 segundos.</li>
+        <li>Universitario lleva 5 partidos sin recibir goles.</li>
+        <li>Melgar es el equipo con más remates al arco.</li>
+      </ul>
+
+      <h2>Publicidad</h2>
+      <img src="img/publicidad.gif" alt="Publicidad" class="gif-move" />
+      <img src="img/publicidad2.gif" alt="Publicidad" class="gif-move" />
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Deporte Total. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

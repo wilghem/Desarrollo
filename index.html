@@ -1,0 +1,209 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Sitio web Deporte Total con noticias y datos deportivos.">
+    <meta name="author" content="Tu Nombre">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>DEPORTE TOTAL - Inicio</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/script.js" defer></script>
+  </head>
+  <body onload="inicializarEventos()">
+    <header class="header">
+      <h1>DEPORTE TOTAL</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="torneos.html">Torneos</a>
+        <a href="estadisticas.html">Estadísticas</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <aside class="leftSide">      
+        <section class="menu-box">
+            <h2>Más Ligas</h2>
+            <ul class="league-menu">
+                <li><a href="#">🇬🇧 Premier League</a></li>
+                <li><a href="#">🇪🇸 LaLiga</a></li>
+                <li><a href="#">🇮🇹 Serie A</a></li>
+                <li><a href="#">🇩🇪 Bundesliga</a></li>
+                <li><a href="#">🇫🇷 Ligue 1</a></li>
+                <li><a href="#">🇺🇸 MLS</a></li>
+                <li><a href="#">🇲🇽 Liga MX</a></li>
+                <li><a href="#">🇵🇪 Liga 1 Perú</a></li>
+            </ul>
+        </section>
+
+        <section class="menu-box">
+            <h2>Más Deportes</h2>
+            <ul class="league-menu">
+                <li><img src="icons/automovilismo.png" alt="Auto" class="icon"> Automovilismo</li>
+                <li><img src="icons/baloncesto.png" alt="Balón" class="icon"> Básquetbol</li>
+                <li><img src="icons/beisbol.png" alt="Beisbol" class="icon"> Béisbol</li>
+                <li><img src="icons/boxeo.png" alt="Boxeo" class="icon"> Boxeo</li>
+                <li><img src="icons/golf.png" alt="Golf" class="icon"> Golf</li>
+                <li><img src="icons/mma.png" alt="MMA" class="icon"> MMA</li>
+                <li><img src="icons/nfl.png" alt="NFL" class="icon"> NFL</li>
+            </ul>
+        </section>
+
+        <section class="menu-box">
+            <h2>Redes Sociales</h2>
+            <ul class="league-menu">
+                <li><img src="icons/facebook.png" alt="Facebook" class="icon"> Facebook</li>
+                <li><img src="icons/instagram.png" alt="Instagram" class="icon"> Instagram</li>
+                <li><img src="icons/youtube.png" alt="Youtube" class="icon"> Youtube</li>
+                <li><img src="icons/twitter.png" alt="Twitter" class="icon"> Twitter</li>                
+            </ul>
+        </section>
+
+        <form class="formulario-contacto" action="contacto.html" method="get" aria-label="Formulario de contacto">
+          <h2>¿Tienes una sugerencia o pregunta?</h2>
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu sugerencia o pregunta" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </aside>
+
+      <section class="body">
+        <h2>Últimas Noticias</h2>
+        <div class="container">
+          <article>
+            <figure>
+              <picture>
+                <source srcset="img/ruizdias.jpg 1x, img/ruizdias.jpg 2x" type="image/jpeg">
+                <img src="img/ruizdias.jpg" alt="Raúl Ruidíaz" class="img-article" loading="lazy">
+              </picture>
+              <figcaption>Raúl Ruidíaz en acción</figcaption>
+            </figure>
+            <h3>Ruidíaz la volvió a 'picar' y anotó penal con Atlético Grau</h3>
+            <p>Lleva 4 goles esta temporada con el 'Patrimonio'.</p>
+          </article>
+
+          <article>
+            <figure>
+              <picture>
+                <source srcset="img/cienciano.jpg 1x, img/cienciano.jpg 2x" type="image/jpeg">
+                <img src="img/cienciano.jpg" alt="Cienciano" class="img-article" loading="lazy">
+              </picture>
+              <figcaption>Celebración de Cienciano</figcaption>
+            </figure>
+            <h3>Cueva anotó a los 23 segundos con Cienciano</h3>
+            <p>Su quinto gol en la temporada, ¿se despide del Cusco?</p>
+          </article>
+          <article>
+            <figure>
+              <picture>
+                <source srcset="img/cristal.jpg 1x, img/cristal.jpg 2x" type="image/jpeg">
+                <img src="img/cristal.jpg" alt="Cienciano" class="img-article" loading="lazy">
+              </picture>
+              <figcaption>Cauteruccio con problemas de gol</figcaption>
+            </figure>
+              <h3>Cauteruccio busca romper mala racha con Cristal</h3>
+              <p>Llegó como goleador, pero aún tiene cuentas pendientes.</p>      
+          </article>   
+          <article>
+            <figure>
+              <picture>
+                <source srcset="img/clasico.jpg 1x, img/clasico.jpg 2x" type="image/jpeg">
+                <img src="img/clasico.jpg" alt="Cienciano" class="img-article" loading="lazy">
+              </picture>
+              <figcaption>Clasicos memorables</figcaption>
+            </figure>
+              <h3>Clásicos memorables entre la 'U' y Cristal</h3>
+              <p>Partidos claves en la lucha por el Apertura.</p>          
+          </article>  
+        </div>
+
+        <!-- Imagen interactiva con mapa -->
+        <section>
+          <h2>Mapa interactivo de los países con ligas principales</h2>
+          <figure>
+            <img 
+              src="img/mapa-mundial.svg" 
+              alt="Mapa Mundial" 
+              usemap="#worldmap" 
+              class="img-map" 
+              width="600"
+            />
+            <figcaption>Haz clic en una región para saber más.</figcaption>
+            <map name="worldmap" id="worldmap">
+              <area 
+                shape="rect" 
+                coords="286,24,524,140" 
+                href="https://en-m-wikipedia-org.translate.goog/wiki/Big_Five_(association_football)?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" 
+                alt="Europa" 
+                title="Europa" 
+                target="_blank"
+              >
+              <area 
+                shape="circle" 
+                coords="25,28,213,181" 
+                href="https://es.wikipedia.org/wiki/Anexo:Liga_m%C3%A1s_fuerte_de_Norte,_Centro_Am%C3%A9rica_y_el_Caribe_del_Siglo_XXI" 
+                alt="América del Norte" 
+                title="América del Norte" 
+                target="_blank"
+              >
+              <area
+                shape="rect" 
+                coords="108,179,213,314"
+                href="https://es.wikipedia.org/wiki/Anexo:Liga_m%C3%A1s_fuerte_de_Sudam%C3%A9rica_del_Siglo_XXI"
+                title="Sudamérica"
+                alt="Sudamérica"
+                target="_blank"
+              >
+              <area
+                shape="rect" 
+                coords="227,148,355,274"
+                href="https://es.wikipedia.org/wiki/Anexo:Liga_m%C3%A1s_fuerte_de_%C3%81frica_del_Siglo_XXI"
+                title="Africa"
+                alt="Africa"
+                target="_blank"
+              >
+            </map>
+          </figure>
+        </section>
+      </section>
+
+      <aside class="rightSide">
+        <img src="img/futbol-deporte.gif" alt="movimiento" class="gif-move" />
+        <table class="mod-data" aria-label="Tabla de posiciones">
+          <thead>
+            <tr>
+              <th scope="col">Equipo</th>
+              <th scope="col">PJ</th>
+              <th scope="col">O</th>
+              <th scope="col">E</th>
+              <th scope="col">P</th>
+              <th scope="col">DIF</th>
+              <th scope="col">PTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Universitario</td><td>13</td><td>8</td><td>2</td><td>3</td><td>+17</td><td>26</td></tr>
+            <tr><td>Alianza Lima</td><td>13</td><td>7</td><td>3</td><td>3</td><td>+10</td><td>24</td></tr>
+            <tr><td>Cienciano</td><td>13</td><td>7</td><td>1</td><td>5</td><td>+6</td><td>22</td></tr>
+            <tr><td>Sporting Cristal</td><td>13</td><td>6</td><td>5</td><td>2</td><td>+9</td><td>23</td></tr>
+            <tr><td>Atlético Grau</td><td>13</td><td>4</td><td>4</td><td>5</td><td>-1</td><td>16</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Deporte Total | Todos los derechos reservados</p>
+    </footer>
+  </body>
+  </html>
