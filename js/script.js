@@ -79,12 +79,79 @@ function inicializarEventos() {
     if (e.key === "d") alert("Presionaste la tecla D");
   });
 
-  setTimeout(() => {
-    alert("Gracias por visitar Deporte Total! Visitas: " + localStorage.getItem("visitas"));
-  }, 5000);
+  // Funcionalidad para menú activo
+  inicializarMenuActivo();
+
+  // Mostrar contador de visitas en la columna derecha
+  mostrarContadorVisitas();
 }
 
-// -------- PRUEBAS --------
+function inicializarMenuActivo() {
+  const menuLinks = document.querySelectorAll('.header nav a');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  function limpiarEstadosActivos() {
+    menuLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+  }
+  
+  function activarEnlace(enlaceActivo) {
+    limpiarEstadosActivos();
+    enlaceActivo.classList.add('active');
+  }
+  
+  menuLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    
+    if (href === currentPage || 
+        (currentPage === '' && href === 'index.html') ||
+        (currentPage === 'index.html' && href === 'index.html')) {
+      activarEnlace(link);
+    }
+    
+    link.addEventListener('click', function(e) {
+      if (href && href !== '#' && !href.startsWith('http')) {
+        activarEnlace(this);
+        
+        localStorage.setItem('activeMenuItem', href);
+      }
+    });
+  });
+  
+  const savedActiveItem = localStorage.getItem('activeMenuItem');
+  if (savedActiveItem && savedActiveItem === currentPage) {
+    menuLinks.forEach(link => {
+      if (link.getAttribute('href') === savedActiveItem) {
+        activarEnlace(link);
+      }
+    });
+  }
+}
+
+function mostrarContadorVisitas() {
+  const rightSide = document.querySelector('.rightSide');
+  if (rightSide) {
+    const contadorDiv = document.createElement('div');
+    contadorDiv.className = 'contador-visitas';
+    contadorDiv.innerHTML = `
+      <h3>📊 Estadísticas del Sitio</h3>
+      <div class="visita-info">
+        <span class="visita-numero">${localStorage.getItem("visitas")}</span>
+        <span class="visita-texto">Visitas totales</span>
+      </div>
+      <p class="visita-mensaje">¡Gracias por visitarnos!</p>
+    `;
+    
+    const tabla = rightSide.querySelector('.mod-data');
+    if (tabla) {
+      tabla.parentNode.insertBefore(contadorDiv, tabla.nextSibling);
+    } else {
+      rightSide.appendChild(contadorDiv);
+    }
+  }
+}
+
 console.log(saludar("Luis"));
 console.log("Factorial de 5:", factorial(5));
 const contar = crearContador();
